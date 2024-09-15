@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindBlocks - Daily Task Tracker</title>
+    <title>MindBlocks</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="profile">
-                <img src="https://scontent.fdac2-2.fna.fbcdn.net/v/t39.30808-1/436363705_3732115627026193_3378162480709462475_n.jpg?stp=dst-jpg_s320x320&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=11_w8DEqQWoQ7kNvgG1Wawl&_nc_ht=scontent.fdac2-2.fna&_nc_gid=A9Yng0TLhrEFAS5ULf_M_Te&oh=00_AYDrKCeNVZ1eh-tewSd3W3R6_aePh5tcTmI9UEWA8BYecw&oe=66EC7087"/>
+                <img src="assets/dp.jpg"/>
             </div>
         </div>
 
@@ -20,145 +20,278 @@
             <!-- Total Time Block -->
             <div class="time-block">
                 <p>Total Time Block</p>
-                <h3>0h 0m / 5h 30m</h3>
+                <h3 id="show-time-block">0h 0m / 0h 0m</h3>
             </div>
-
+        <div class="overflow-area">
             <!-- Task List -->
-            <div class="task-list">
-                <div class="task">
-                    <div class="timer">
-                        <button class="play-btn">▶</button>
-                        <p class="timer-duration">0h 0m</p>
-                    </div>
-                    <!-- <div class="task-details"> -->
-                        <p class="task-category">Study</p>
-                        <p class="task-name">finish the DLD BCD chapter</p>
-                    <!-- </div> -->
-                    <p class="estimated-duration">2h 30m</p>
-                    <select class="task-status">
-                        <option>Not Started</option>
-                        <option>In Progress</option>
-                        <option>Done</option>
-                        <option>Delayed</option>
-                        <option>Dropped</option>
-                    </select>
+            <div class="task-list" id="tasks-list"></div>
+            <div class="add-task-btn" id="add-task-btn">
+                <div class="add-task-btn-container">
+                    <button class="plus-btn">+</button>
+                    <p>Add new task</p>
                 </div>
-                <div class="task">
-                    <div class="timer">
-                        <button class="play-btn">▶</button>
-                        <p class="timer-duration">0h 0m</p>
-                    </div>
-                    <!-- <div class="task-details"> -->
-                        <p class="task-category">Programming</p>
-                        <p class="task-name">implement stack and queue with custom linkedlist in c++</p>
-                    <!-- </div> -->
-                    <p class="estimated-duration">3h 0m</p>
-                    <select class="task-status">
-                        <option>Not Started</option>
-                        <option>In Progress</option>
-                        <option>Done</option>
-                        <option>Delayed</option>
-                        <option>Dropped</option>
-                    </select>
-                </div>
-                <div class="add-task-btn">
-                    <div class="add-task-container">
-                        <button class="plus-btn">+</button>
-                        <p>Add new task</p>
-                    </div>
-                    </select>
-                </div>
-                
             </div>
         </div>
-
-        <!-- Calendar and Categories -->
+    </div>
+    <!-- Calendar and Categories -->
         <div class="side-panel">
-            <!-- <div class="calendar">
-                <h3>Calender Module</h3> -->
-                <div class="calendar">
-                    <div class="month-year-container">
-                        <p class="month-year">September 2024</p>
-                        <div class="prev-next-month-btn">
-                            <div class="arrow-btn" style="margin-right: 5px;">
-                                <p>&lt;</p>
-                            </div>
-                            <div class="arrow-btn">
-                                <p>&gt;</p>
-                            </div>
+            <div class="calendar">
+                <div class="month-year-container">
+                    <p class="month-year">September 2024</p>
+                    <div class="prev-next-month-btn">
+                        <div class="arrow-btn" style="margin-right: 5px;">
+                            <p>&lt;</p>
+                        </div>
+                        <div class="arrow-btn">
+                            <p>&gt;</p>
                         </div>
                     </div>
-                    
-                    <div class="calendar-grid">
-                        <div class="day">S</div>
-                        <div class="day">M</div>
-                        <div class="day">T</div>
-                        <div class="day">W</div>
-                        <div class="day">T</div>
-                        <div class="day">F</div>
-                        <div class="day">S</div>
-                
-                        <!-- Empty cells for days before 1st September 2024 (Sunday) -->
-                        <div class="date">1</div>
-                        <div class="date">2</div>
-                        <div class="date">3</div>
-                        <div class="date">4</div>
-                        <div class="date">5</div>
-                        <div class="date">6</div>
-                        <div class="date">7</div>
-                
-                        <div class="date">8</div>
-                        <div class="date">9</div>
-                        <div class="date">10</div>
-                        <div class="date">11</div>
-                        <div class="date">12</div>
-                        <div class="date">13</div>
-                        <div class="date">14</div>
-                
-                        <div class="date today">15</div>
-                        <div class="date">16</div>
-                        <div class="date">17</div>
-                        <div class="date">18</div>
-                        <div class="date">19</div>
-                        <div class="date">20</div>
-                        <div class="date">21</div>
-                
-                        <div class="date">22</div>
-                        <div class="date">23</div>
-                        <div class="date">24</div>
-                        <div class="date">25</div>
-                        <div class="date">26</div>
-                        <div class="date">27</div>
-                        <div class="date">28</div>
-                
-                        <div class="date">29</div>
-                        <div class="date">30</div>
-                        <div class="date">31</div>
-                        <div class="date"></div>
-                        <div class="date"></div>
-                        <div class="date"></div>                
-                        <div class="date"></div>
-                    </div>
                 </div>
-                
-            <!-- </div> -->
+                <div class="calendar-grid">
+                    <div class="day">S</div>
+                    <div class="day">M</div>
+                    <div class="day">T</div>
+                    <div class="day">W</div>
+                    <div class="day">T</div>
+                    <div class="day">F</div>
+                    <div class="day">S</div>
+            
+                    <!-- Empty cells for days before 1st September 2024 (Sunday) -->
+                    <div class="date">1</div>
+                    <div class="date">2</div>
+                    <div class="date">3</div>
+                    <div class="date">4</div>
+                    <div class="date">5</div>
+                    <div class="date">6</div>
+                    <div class="date">7</div>
+            
+                    <div class="date">8</div>
+                    <div class="date">9</div>
+                    <div class="date">10</div>
+                    <div class="date">11</div>
+                    <div class="date">12</div>
+                    <div class="date">13</div>
+                    <div class="date">14</div>
+            
+                    <div class="date">15</div>
+                    <div class="date today">16</div>
+                    <div class="date">17</div>
+                    <div class="date">18</div>
+                    <div class="date">19</div>
+                    <div class="date">20</div>
+                    <div class="date">21</div>
+            
+                    <div class="date">22</div>
+                    <div class="date">23</div>
+                    <div class="date">24</div>
+                    <div class="date">25</div>
+                    <div class="date">26</div>
+                    <div class="date">27</div>
+                    <div class="date">28</div>
+            
+                    <div class="date">29</div>
+                    <div class="date">30</div>
+                    <div class="date">31</div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>                
+                    <div class="date"></div>
+                </div>
+            </div>
             <div class="categories">
                 <p class="category-title">Category</p>
-                <button class="category-btn">
+                <div id="category-container">
+                    <!-- <button class="category-btn">
+                        <p>All</p>
+                        <p class="category-quantity">0</p>
+                    </button> -->
+                </div>
+                <!-- <button class="category-btn">
                     <p>Work</p>
                     <p class="category-quantity">0</p>
                 </button>
                 <button class="category-btn">
                     <p>Study</p>
-                    <p class="category-quantity">1</p>
+                    <p class="category-quantity">0</p>
                 </button>
                 <button class="category-btn">
                     <p>Programming</p>
-                    <p class="category-quantity">1</p>
-                </button>
-                <button class="add-category-btn">Add new category</button>
+                    <p class="category-quantity">0</p>
+                </button> -->
+                <button class="add-category-btn" id="add-category-btn">Add new category</button>
+            </div>
+        </div>
+    <div class="add-task-modal" id="add-task-modal">
+        <div class="add-task-container">
+            <div class="add-task-header">
+                <h2>Add Task</h2>
+            </div>
+            <div class="add-task-details">
+                <div class="add-task-title-container">
+                    <input class="add-task-title" type="text" id="add-task-title" placeholder="Enter task here" autocomplete="off" required/>
+                </div>
+                <div class="add-task-category-container">
+                    <label class="add-task-category-title" for="add-task-category">Category</label>
+                    <select class="add-task-category" id="available-categories">
+                        <option value="0" disabled selected hidden>Select category</option>
+                        <!-- <option>Programming</option>
+                        <option>Study</option>
+                        <option>Work</option> -->
+                    </select>
+                </div>
+                <div class="add-task-est-time-container">
+                    <label class="add-task-est-time-title" for="add-task-est-time-title">Estimated Time</label>
+                    <select class="add-task-est-hour" id="add-task-est-hour">
+                        <option value="0" disabled selected hidden>Hour</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select class="add-task-est-minute" id="add-task-est-minute">
+                        <option value="0" disabled selected hidden>Minute</option>
+                        <option>0</option>
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                        <option>35</option>
+                        <option>40</option>
+                        <option>45</option>
+                        <option>50</option>
+                        <option>55</option>
+                    </select>
+                </div>
+                <div class="add-task-save-close-btn-container">
+                    <button class="add-task-save-btn add-task-btns" id="add-task-save-btn">Save</button>
+                    <button class="add-task-modal-close add-task-btns" id="add-task-modal-close">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="edit-task-modal" id="edit-task-modal">
+        <div class="edit-task-container">
+            <div class="add-task-header">
+                <h2>Edit Task</h2>
+            </div>
+            <div class="add-task-details">
+                <div class="add-task-title-container">
+                    <input class="add-task-title" type="text" id="edit-task-title" placeholder="Enter task here" autocomplete="off"/>
+                </div>
+                <div class="add-task-category-container">
+                    <label class="add-task-category-title" for="add-task-category">Category</label>
+                    <select class="add-task-category" id="available-categories-edit">
+                        <!-- <option>Programming</option>
+                        <option>Study</option>
+                        <option>Work</option> -->
+                    </select>
+                </div>
+                <div class="add-task-est-time-container">
+                    <label class="add-task-est-time-title" for="add-task-est-time-title">Estimated Time</label>
+                    <select class="add-task-est-hour" id="edit-task-est-hour">
+                        <option value="0" disabled selected hidden>Hour</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select class="add-task-est-minute" id="edit-task-est-minute">
+                        <option value="0" disabled selected hidden>Minute</option>
+                        <option>0</option>
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                        <option>35</option>
+                        <option>40</option>
+                        <option>45</option>
+                        <option>50</option>
+                        <option>55</option>
+                    </select>
+                </div>
+
+                <div class="add-task-est-time-container">
+                    <label class="add-task-est-time-title" for="add-task-est-time-title">Set Manual Time</label>
+                    <select class="add-task-est-hour" id="edit-task-timer-hour">
+                        <option value="0" disabled selected hidden>Hour</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select class="add-task-est-minute" id="edit-task-timer-minute">
+                        <option value="0" disabled selected hidden>Minute</option>
+                        <option>0</option>
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                        <option>35</option>
+                        <option>40</option>
+                        <option>45</option>
+                        <option>50</option>
+                        <option>55</option>
+                    </select>
+                </div>
+                <div class="add-task-save-close-btn-container">
+                    <button class="add-task-save-btn add-task-btns" id="edit-task-save-btn">Save</button>
+                    <button class="add-task-modal-close add-task-btns" id="delete-task-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-category-modal" id="add-category-modal">
+        <div class="add-category-container">
+            <div class="add-task-header">
+                <h2>Add Category</h2>
+            </div>
+            <div class="add-task-details">
+                <div class="add-task-title-container">
+                    <input class="add-task-title" type="text" id="add-category-title" placeholder="Enter new category name" autocomplete="off"/>
+                </div>
+                <div class="add-task-save-close-btn-container">
+                    <button class="add-task-save-btn add-task-btns" id="add-category-save-btn">Save</button>
+                    <button class="add-task-modal-close add-task-btns" id="add-category-modal-close">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
