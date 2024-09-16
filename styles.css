@@ -61,7 +61,7 @@ body {
     text-align: center;
     border-radius: 30px;
     margin-bottom: 20px;
-    width: 20%;
+    width: 30%;
 }
 
 .time-block p {
@@ -196,7 +196,7 @@ body {
 
 /* Side Panel */
 .side-panel {
-    width: 400px;
+    width: 350px;
     padding: 20px;
     background-color: #191919;
     background-color: rgba(0, 0, 0, 0.6);
