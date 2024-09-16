@@ -181,6 +181,7 @@ body {
 }
 
 .plus-btn {
+    cursor: pointer;
     font-size: 24px;
     background-color: #b7b7b7;
     border: none;
