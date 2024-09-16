@@ -13,6 +13,11 @@ let categories = {
     "Programming": 0,
     "Study": 0,
     "Work": 0,
+    // "a": 0,
+    // "b": 0,
+    // "c": 0,
+    // "d": 0,
+    // "e": 0,
 }
 
 const addCategoryModal = document.getElementById("add-category-modal");
@@ -42,7 +47,7 @@ function saveNewCategory()
     }
     categories[newCategory] = 0;
     enteredNewCategory.value = "";
-    closeAddCategoryModal();
+    // closeAddCategoryModal();
     clearCategories();
     loadCategories();
     renderTasks();
@@ -231,8 +236,6 @@ function saveAddTask()
     const selectedCategory = addTaskCategory.value;
     const estHour = addTaskEstHour.value;
     const estMinute = addTaskEstMinute.value;
-
-    console.log("it came");
 
     if (enteredTitle === "") {
         alert("Task name cannot be empty!");
@@ -441,8 +444,15 @@ function renderTasks()
         tasksList.appendChild(taskElement);
     }
     loadTimeBlock();
+    loadCategoriesOnCategoryContainer();
     // updateTaskCount();
     // console.log(categories);
+    
+    loadCategoriesInAddCategoryModal();
+}
+
+function loadCategoriesOnCategoryContainer()
+{
     const categoriesContainer = document.getElementById("category-container");
     categoriesContainer.innerHTML = "";
     for (const category in categories){
@@ -459,6 +469,57 @@ function renderTasks()
         categoryBtn.appendChild(categoryQuan);
         categoriesContainer.appendChild(categoryBtn);
     }
+}
+
+function loadCategoriesInAddCategoryModal()
+{
+    const existingCategoryContainer = document.getElementById("existing-category-container");
+    existingCategoryContainer.innerHTML = "";
+    for (const category in categories){
+        if(category === "All") continue;
+        const categoryBtn = document.createElement("button");  
+        categoryBtn.classList.add("existing-category-btn-in-modal");
+
+        const categoryTitle = document.createElement("p");
+        categoryTitle.textContent = category;
+
+        const quanDelContainer = document.createElement("div");
+        quanDelContainer.classList.add("existing-category-quandelete-container");
+
+        const categoryQuan = document.createElement("p");
+        categoryQuan.classList.add("category-quantity");
+        categoryQuan.textContent = categories[category];
+
+        const categoryDeleteBtn = document.createElement("button");
+        categoryDeleteBtn.classList.add("delete-category-btn");
+        categoryDeleteBtn.textContent = "Remove";
+        categoryDeleteBtn.addEventListener("click", () => removeCategory(category));
+
+        quanDelContainer.appendChild(categoryQuan);
+        quanDelContainer.appendChild(categoryDeleteBtn);
+        categoryBtn.appendChild(categoryTitle);
+        categoryBtn.appendChild(quanDelContainer);
+        existingCategoryContainer.appendChild(categoryBtn);
+    }
+}
+
+function removeCategory(category)
+{
+    for(const task in tasks)
+    {
+        if(tasks[task].taskCategory === category)
+        {
+            delete tasks[task];
+            // console.log(tasks);
+        }
+    }
+    delete categories[category];
+    // console.log(categories);
+    loadCategoriesInAddCategoryModal();
+    loadCategoriesOnCategoryContainer();
+    clearCategories();
+    loadCategories();
+    renderTasks();
 }
 
 // function updateTaskCount()
