@@ -32,6 +32,7 @@ function generateCalendar(month, year) {
     // Add day cells for the current month
     for (let day = 1; day <= daysInMonth; day++) {
         const dayCell = document.createElement("div");
+        dayCell.classList.add("date");
         dayCell.textContent = day;
 
         // Mark today's date
@@ -63,7 +64,7 @@ function populateSelectors() {
     monthSelector.value = currentMonth; // Set the current month
 
     // Populate year selector (from 1900 to 2100)
-    for (let year = 1900; year <= 2100; year++) {
+    for (let year = 2024; year <= 2100; year++) {
         const option = document.createElement("option");
         option.value = year;
         option.textContent = year;
@@ -90,10 +91,26 @@ function selectDate(day, month, year) {
         dayCells[selectedIndex + 7].classList.add("selected");
     }
 
-    // Log the selected date in dd-mm-yyyy format
+    // Log the selected date in dd-mm-yyyy format with day name
+    const selectedDate = new Date(year, month, day);
     const formattedDate = `${String(day).padStart(2, '0')}-${String(month + 1).padStart(2, '0')}-${year}`;
-    console.log(formattedDate);
+    const dayName = dayNames[selectedDate.getDay()];
+    console.log(`${dayName}, ${formattedDate}`);
 }
+
+// Function to go back to today's date
+function goToToday() {
+    currentMonth = new Date().getMonth();
+    currentYear = new Date().getFullYear();
+    generateCalendar(currentMonth, currentYear);
+    document.getElementById("month-selector").value = currentMonth;
+    document.getElementById("year-selector").value = currentYear;
+}
+
+// Event listener for the Today button
+document.getElementById("today-btn").addEventListener("click", function() {
+    goToToday();
+});
 
 // Event listeners for month and year changes
 document.getElementById("month-selector").addEventListener("change", function() {
@@ -106,6 +123,23 @@ document.getElementById("year-selector").addEventListener("change", function() {
     generateCalendar(currentMonth, currentYear);
 });
 
+// Function to get time-based greeting
+function getGreeting() {
+    const hours = new Date().getHours();
+
+    if (hours < 12) {
+        // return "Good Morning";
+        console.log("Good Morning");
+    } else if (hours >= 12 && hours < 18) {
+        // return "Good Afternoon";
+        console.log("Good Afternoon");
+    } else {
+        // return "Good Evening";
+        console.log("Good Evening");
+    }
+}
+
 // Initialize the calendar for the current month and year
 populateSelectors();
+getGreeting();
 generateCalendar(currentMonth, currentYear);

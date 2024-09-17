@@ -139,76 +139,76 @@ let tasks = {}
 //         estimatedTime: [0, 0],
 //         taskStatus: "Dropped"
 //     },
-//     // 6: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 7: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 8: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 9: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 10: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 11: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 12: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 13: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 14: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // },
-//     // 15: {
-//     //     timerTime: "0h 0m",
-//     //     taskCategory: "Demo",
-//     //     taskTitle: "Demo", 
-//     //     estimatedTime: "0h 0h",
-//     //     taskStatus: "Not Started"
-//     // }
+//     6: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     7: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     8: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     9: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     10: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     11: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     12: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     13: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     14: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     },
+//     15: {
+//         timerTime: "0h 0m",
+//         taskCategory: "Demo",
+//         taskTitle: "Demo", 
+//         estimatedTime: "0h 0h",
+//         taskStatus: "Not Started"
+//     }
 // };
 
 const tasksList = document.getElementById("tasks-list");

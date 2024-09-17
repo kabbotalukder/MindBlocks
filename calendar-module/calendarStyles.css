@@ -1,0 +1,162 @@
+/* General Styles */
+* {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: transparent;
+    font-family: 'Arial', sans-serif;
+    background-color: #363636;
+    color: white;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: transparent;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    width: auto;
+    padding: 15px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.today-btn {
+    /* width: 70px; */
+    background-color: #262626;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.today-btn:hover {
+    background-color: #363636;
+}
+
+.calendar-header select {
+    /* background-color: #333; */
+    background: #1e1e1e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    /* width: 48%; */
+}
+
+.calendar-header select::-webkit-scrollbar {
+    display: none;
+}
+
+.today-btn {
+    flex-grow: 1;
+}
+
+.month-selector {
+    flex-grow: 2;
+}
+
+.year-selector {
+    flex-grow: 1;
+}
+
+
+.calendar-header select:focus {
+    outline: none;
+}
+
+.calendar-grid {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.date {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ccc;
+    border-radius: 50%; /* Change shape to a circle on hover */
+    
+    /* position: relative; */
+}
+
+.date:hover {
+    background-color: #363636;
+    /* color: white; */
+    cursor: pointer;
+    /* transform: scale(1.1); */
+    /* padding: 5px; */
+    /* border-radius: 50%; */
+}
+
+/* Circle effect for the selected or hovered dates */
+/* .calendar-grid div:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: -1;
+} */
+
+/* Highlight today's date */
+.today {
+    background-color: #125ab8;
+    /* color: white; */
+    /* border-radius: 50%; */
+}
+
+/* Highlight the selected date */
+.selected {
+    background-color: #363636;
+    /* color: white; */
+    /* border-radius: 50%; */
+}
+
+/* Style for day names (Sun-Sat) */
+.day-name {
+    text-align: center;
+    /* font-weight: bold; */
+    color: #fff;
+    /* pointer-events: none; */
+}
+
+/* Mark empty cells to ignore them during selection */
+.empty-cell {
+    background-color: transparent;
+    pointer-events: none;
+}

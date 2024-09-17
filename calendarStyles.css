@@ -1,11 +1,13 @@
 /* General Styles */
-* {
+/* * {
+    background: transparent;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    background: transparent;
     font-family: 'Arial', sans-serif;
     background-color: #363636;
     color: white;
@@ -15,18 +17,21 @@ body {
 }
 
 .container {
+    background: transparent;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .calendar-container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    background-color: #1e1e1e;
+    /* background: #1e1e1e; */
+    background: transparent;
     width: auto;
-    padding: 15px;
+    /* padding: 15px; */
     height: auto;
     border-radius: 15px;
 }
@@ -34,19 +39,62 @@ body {
 .calendar-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.calendar-header select {
-    /* background-color: #333; */
-    flex-grow: 1;
-    background: transparent;
+.today-btn {
+    /* width: 70px; */
+    /* background-color: #262626; */
+    background-color: #1e1e1e;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    width: 48%;
+    height: 38px;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+}
+
+.today-btn:hover {
+    background-color: #363636;
+}
+
+.calendar-header select {
+    /* background-color: #333; */
+    background: #1e1e1e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    /* width: 48%; */
+}
+
+.calendar-header select::-webkit-scrollbar {
+    display: none;
+}
+
+.month-selector {
+    transition: all 0.3s ease;
+    height: 38px;
+    margin: 0px 5px;
+    flex-grow: 2;
+}
+
+.month-selector:hover {
+    background-color: #363636;
+}
+
+.year-selector {
+    transition: all 0.3s ease;
+    height: 38px;
+    flex-grow: 1;
+}
+
+.year-selector:hover {
+    background-color: #363636;
 }
 
 .calendar-header select:focus {
@@ -62,7 +110,7 @@ body {
     grid-gap: 5px;
 }
 
-.calendar-grid div {
+.date {
     width: 100%;
     padding: 10px 0px;
     text-align: center;
@@ -70,13 +118,13 @@ body {
     font-weight: 500;
     color: #ccc;
     border-radius: 50%; /* Change shape to a circle on hover */
-    /* transition: all 0.3s ease; */
+    
     /* position: relative; */
 }
 
-.calendar-grid div:hover {
-    background-color: #444;
-    color: white;
+.date:hover {
+    background-color: #363636;
+    /* color: white; */
     cursor: pointer;
     /* transform: scale(1.1); */
     /* padding: 5px; */
@@ -100,23 +148,23 @@ body {
 
 /* Highlight today's date */
 .today {
-    /* background-color: #ff5e5e; */
+    background-color: #125ab8;
     /* color: white; */
     /* border-radius: 50%; */
-    border: 2px solid #363636;
 }
 
 /* Highlight the selected date */
 .selected {
-    background-color: #4a90e2;
-    color: white;
+    background-color: #363636;
+    /* color: white; */
     /* border-radius: 50%; */
 }
 
 /* Style for day names (Sun-Sat) */
-.day-names {
-    font-weight: bold;
-    color: white;
+.day-name {
+    text-align: center;
+    /* font-weight: bold; */
+    color: #fff;
     /* pointer-events: none; */
 }
 
