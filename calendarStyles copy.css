@@ -1,5 +1,5 @@
 /* General Styles */
-/* * {
+* {
     background: transparent;
     margin: 0;
     padding: 0;
@@ -22,16 +22,14 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
-} */
+}
 
 .calendar-container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    /* background: #1e1e1e; */
-    background: transparent;
+    background-color: #1e1e1e;
     width: auto;
-    /* padding: 15px; */
+    padding: 15px;
     height: auto;
     border-radius: 15px;
 }
@@ -40,20 +38,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .today-btn {
     /* width: 70px; */
-    /* background-color: #262626; */
-    background-color: #1e1e1e;
+    background-color: #262626;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    font-size: 14px;
-    height: 38px;
-    flex-grow: 1;
+    font-size: 16px;
     transition: all 0.3s ease;
 }
 
@@ -68,7 +63,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     /* width: 48%; */
 }
 
@@ -76,26 +71,18 @@ body {
     display: none;
 }
 
-.month-selector {
-    transition: all 0.3s ease;
-    height: 38px;
-    margin: 0px 5px;
-    flex-grow: 2;
-}
-
-.month-selector:hover {
-    background-color: #363636;
-}
-
-.year-selector {
-    transition: all 0.3s ease;
-    height: 38px;
+.today-btn {
     flex-grow: 1;
 }
 
-.year-selector:hover {
-    background-color: #363636;
+.month-selector {
+    flex-grow: 2;
 }
+
+.year-selector {
+    flex-grow: 1;
+}
+
 
 .calendar-header select:focus {
     outline: none;
@@ -114,7 +101,7 @@ body {
     width: 100%;
     padding: 10px 0px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: #ccc;
     border-radius: 50%; /* Change shape to a circle on hover */
@@ -129,21 +116,6 @@ body {
     /* transform: scale(1.1); */
     /* padding: 5px; */
     /* border-radius: 50%; */
-}
-
-.day-cell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.dot-mark {
-    position: absolute;
-    margin-top: 18px;
-    background-color: #12b852;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
 }
 
 /* Circle effect for the selected or hovered dates */
@@ -180,7 +152,6 @@ body {
     text-align: center;
     /* font-weight: bold; */
     color: #fff;
-    font-size: 14px;
     /* pointer-events: none; */
 }
 
@@ -189,4 +160,3 @@ body {
     background-color: transparent;
     pointer-events: none;
 }
-

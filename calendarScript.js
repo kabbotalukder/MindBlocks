@@ -1,3 +1,4 @@
+let formattedSelectedDate;
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 let selectedDay = null; // Track the selected day
@@ -93,9 +94,10 @@ function selectDate(day, month, year) {
 
     // Log the selected date in dd-mm-yyyy format with day name
     const selectedDate = new Date(year, month, day);
-    const formattedDate = `${String(day).padStart(2, '0')}-${String(month + 1).padStart(2, '0')}-${year}`;
+    formattedSelectedDate = `${String(day).padStart(2, '0')}-${String(month + 1).padStart(2, '0')}-${year}`;
     const dayName = dayNames[selectedDate.getDay()];
-    // console.log(`${dayName}, ${formattedDate}`);
+    // console.log(`${dayName}, ${formattedSelectedDate}`);
+    console.log(formattedSelectedDate);
 }
 
 // Function to go back to today's date
