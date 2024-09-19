@@ -427,7 +427,7 @@ function selectDate(day, month, year) {
     }
 
     // Find the newly selected day in the calendar grid
-    const dayCells = document.querySelectorAll("#calendar-grid div:not(.empty-cell)"); // Exclude empty cells
+    const dayCells = document.querySelectorAll("#calendar-grid div:not(.dot-mark)"); // Exclude empty cells
     const selectedIndex = day - 1; // Adjust to 0-based index
 
     // Set the selected class on the clicked date
@@ -634,8 +634,10 @@ const editTaskTimerMinute = document.getElementById("edit-task-timer-minute");
 
 function editTask(task)
 {
-    editTaskTimerHour.value = task.timerTime;
-    editTaskTimerMinute.value = task.timerTime;
+    let taskTimerHour = Math.floor(task.timerTime / 3600);
+    let taskTimerMinute = Math.floor((task.timerTime % 3600) / 60);
+    editTaskTimerHour.value = taskTimerHour;
+    editTaskTimerMinute.value = taskTimerMinute;
     editTaskCategory.value = task.taskCategory;
     editTaskTitle.value = task.taskTitle;
     editTaskEstHour.value = task.estimatedTime[0];
