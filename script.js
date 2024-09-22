@@ -145,14 +145,14 @@ let tasks = {
             timerTime: 0,
             taskCategory: "Demo",
             taskTitle: "Demo", 
-            estimatedTime: "0h 0h",
+            estimatedTime: [0, 0],
             taskStatus: "Not Started"
         },
         {
             timerTime: 0,
             taskCategory: "Demo",
             taskTitle: "Demo", 
-            estimatedTime: "0h 0h",
+            estimatedTime: [0, 0],
             taskStatus: "Not Started"
         },
     ],
@@ -161,14 +161,14 @@ let tasks = {
             timerTime: 0,
             taskCategory: "Demo",
             taskTitle: "Demo", 
-            estimatedTime: "0h 0h",
+            estimatedTime: [0, 0],
             taskStatus: "Not Started"
         },
         {
             timerTime: 0,
             taskCategory: "Demo",
             taskTitle: "Demo", 
-            estimatedTime: "0h 0h",
+            estimatedTime: [0, 0],
             taskStatus: "Not Started"
         },
     ]
